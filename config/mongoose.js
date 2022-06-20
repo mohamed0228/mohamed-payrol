@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 const mysql = require('mysql');
 mongoose.set('useCreateIndex', 'useUnifiedTopology', true);
-mongoose.connect('mongodb://localhost/payrolldb');  //connect db
+mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost/payrolldb',{
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});  //connect db
 const db = mongoose.connection;  //acquire the connection
 
 
