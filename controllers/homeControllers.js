@@ -255,11 +255,7 @@ module.exports.atdp = function(req,res){
 }
 
 
-    // em = docs[0];
-    // let dept = ['R&D','Production','Marketing','Human Resource','Finance and Accounting']
-    // let emp = docs[0];
-    // emp.dname = dept[docs[0].dno-1]
-    // return res.render('user',{title:"user",personal:p,user:user,employment:e,list:emp});    
+
     
     
 module.exports.transactions = function(req,res){
@@ -275,14 +271,7 @@ module.exports.transactions = function(req,res){
 module.exports.transactionsp = function(req,res){
     let body = req.body;
     let at = {tid:parseInt(body.tid),eid:parseInt(body.eid),amount:0, month:body.month};
-    // transactions.find({ tid: at.tid}, function (err, docs) {
-    //     console.log(docs);
-    //     if(err){
-    //         console.log('error');
-    //         return;
-    //     }
-    //     if(docs.length==0)
-    //     {
+   
             console.log(at);
             employee.find({ eid: at.eid}, function (err, docs) {
                 if(docs.length==0)
@@ -340,19 +329,13 @@ module.exports.transactionsp = function(req,res){
                     });       
                 
                     });    
-                //return res.render('salary',{title:"Salary",user:user,salary:sal,deduct:d});
+                
                 });
                     
            });
         });
     }
-    // else
-    // {
-    //     return res.redirect('back');
-    // }
     
-    // ;})
-// }
 
 
 
@@ -377,7 +360,7 @@ module.exports.history = function(req,res){
           
           tsn.sort( compare );
         return res.render('history',{title:"History",emp:tsn});
-        //return res.render('home',{title:"TODO APP",task_list:tasks});
+       
    
     })  
     

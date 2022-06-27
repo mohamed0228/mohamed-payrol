@@ -89,7 +89,7 @@ module.exports.userlog = function(req,res){
    
 }
 
-    //console.log(query)
+  
 
 
 
@@ -112,7 +112,7 @@ module.exports.home = function(req,res){
         
         ;})
     
-    //return res.render('user',{title:"user",personal:p,user:user,employment:e});
+   
 
 }
 module.exports.user = function(req,res){
@@ -138,7 +138,7 @@ module.exports.salary = function(req,res){
             list.view = 0;
             return res.render('salary',{title:"Salary",user:user,salary:sal,deduct:de,list:list});
             });    
-        //return res.render('salary',{title:"Salary",user:user,salary:sal,deduct:d});
+  
         });
         
 
@@ -165,7 +165,7 @@ module.exports.payment = function(req,res){
         return res.render('payment',{title:"Payment",emp:emp,list:list});    
         
         ;})
-    //return res.render('payment',{title:"Pay History",user:user});
+   
 
 }
 module.exports.attendence = function(req,res){
@@ -189,7 +189,7 @@ module.exports.attendence = function(req,res){
         return res.render('attendence',{title:"Attendence",emp:emp,list:list});    
         
         ;})
-    //return res.render('attendence',{title:"Attendence",user:user});
+    
 
 }
 
@@ -198,8 +198,7 @@ module.exports.pay_slip = function(req,res){
     
     console.log('pay');
     console.log(go);
-    //return res.send('pay');
-    //return res.render('attendence',{title:"Attendence",user:user});
+   
 
     var id = req.query.id;
     console.log(id);
@@ -418,7 +417,7 @@ module.exports.pay_slip = function(req,res){
 
                     });
                         
-                //return res.render('salary',{title:"Salary",user:user,salary:sal,deduct:d});
+                
                 });
                     
            });
@@ -430,156 +429,3 @@ module.exports.pay_slip = function(req,res){
 
 
 
-
-        // console.log(go);
-        // employee.find({ eid: go.eid}, function (err, docs) {
-        //         if(docs.length==0)
-        //             {
-        //                 console.log(err);
-        //                 var errors = 'EId not found';
-        //                 return res.redirect('/admin/transactions/?id='+errors); 
-        //             }
-        //         console.log('emp');
-        //         console.log(docs);
-        //         var emp = docs[0];
-        // salary.find({ sid: emp.sid}, function (err, docs) {
-        //         if(docs.length==0)
-        //             {
-        //                 console.log(err);
-        //                 var errors = 'Salary details not found';
-        //                 return res.redirect('/admin/transactions/?id='+errors); 
-        //             }
-        //         console.log('salary');
-        //         console.log(docs);
-        //         var sal = docs[0];
-        //         sal.total = sal.base+sal.hra+sal.da+sal.ma;
-        //         deduct.find({ did: emp.did}, function (err, docs) {
-        //             if(docs.length==0)
-        //             {
-        //                 console.log(err);
-        //                 var errors = 'Deduction details not found';
-        //                 return res.redirect('/admin/transactions/?id='+errors); 
-        //             }
-        //             console.log('deduct');
-        //             console.log(docs);
-        //             var de = docs[0];
-        //             de.total = de.tax+de.pf+de.wf+de.loan+de.bus;
-        //         attendence.find({eid:emp.eid,month:at.month},function(err,docs){
-        //             if(docs.length==0)
-        //             {
-        //                 console.log(err);
-        //                 var errors = 'Attendence of month not found';
-        //                 return res.redirect('/admin/transactions/?id='+errors); 
-        //             }
-        //             console.log('attendence');
-        //             console.log(docs);
-        //             var leave = docs[0].leaves; 
-        //             de.total = de.total+(leave*de.leave);
-        //             at.amount = sal.total-de.total; 
-        //             transactions.create(at,function(err,newContact){
-        //                 if(err)
-        //                 {
-        //                     console.log(err);
-        //                     var errors = 'TId already exists';
-        //                     return res.redirect('/admin/transactions/?id='+errors);
-        //                 }
-        //                 return res.render('transactions',{title:"Transactions"});
-                        
-        //             });       
-                
-        //             });    
-        //         //return res.render('salary',{title:"Salary",user:user,salary:sal,deduct:d});
-        //         });
-                    
-        //    });
-        // });
-
-
-
-
-
-
-        // var documentDefinition = {
-        //     content: [
-        //        {
-        //             text: 'Pay Slip\n\n',
-        //             style: 'header'
-        //        },
-        //     {
-        //     table: {
-        //             widths: ['*'],
-        //             body: [[" "], [" "]]
-        //     },
-        //     layout: {
-        //         hLineWidth: function(i, node) {
-        //             return (i === 0 || i === node.table.body.length) ? 0 : 2;
-        //         },
-        //         vLineWidth: function(i, node) {
-        //             return 0;
-        //         },
-        //     }
-            
-            
-        //    },
-        //    {
-        //             style: 'tableExample',
-        //             table: {
-        //                 widths: ['33%', '33%', '33%'],
-        //                 body: [
-        //                     [[{text:[{text:'Transaction Id:\t',bold:true},'1004']}], [{text:[{text:'Emp Id:\t',bold:true},'1001']}], [{text:[{text:'Month:\t',bold:true},'Jan\n\n']}]],
-        //                     [[{text:[{lineHeight: 1.4,text:'Name:\n',bold:true},{text:'1001'}]}], [{text:[{lineHeight: 1.4,text:'Department:\n',bold:true},{text:'1001'}]}], [{text:[{lineHeight: 1.4,text:'Designation:\n',bold:true},{text:'1001'}]}]],
-                            
-        //                 ]
-        //             },
-        //             layout: 'headerLineOnly',
-        //             margin: [10, 10, 0, 10],
-        //         },
-        //     {
-        //     table: {
-        //             widths: ['*'],
-        //             body: [[" "], [" "]]
-        //     },
-        //     layout: {
-        //         hLineWidth: function(i, node) {
-        //             return (i === 0 || i === node.table.body.length) ? 0 : 2;
-        //         },
-        //         vLineWidth: function(i, node) {
-        //             return 0;
-        //         },
-        //     }
-            
-            
-        //    },	
-           
-        //     ],
-        //     styles: {
-        //         header: {
-        //             fontSize: 18,
-        //             bold: true,
-        //             alignment : 'center'
-        //         },
-        //         subheader: {
-        //             fontSize: 15,
-        //             bold: true
-        //         },
-        //         quote: {
-        //             italics: true
-        //         },
-        //         small: {
-        //             fontSize: 8
-        //         }
-        //     }
-            
-        // }
-        
-        //     const pdfDoc = pdfMake.createPdf(documentDefinition);
-        //     pdfDoc.getBase64((data)=>{
-        //         res.writeHead(200, 
-        //         {
-        //             'Content-Type': 'application/pdf',
-        //             'Content-Disposition':'attachment;filename="filename.pdf"'
-        //         });
-        
-        //         const download = Buffer.from(data.toString('utf-8'), 'base64');
-        //         res.end(download);
-        //     });

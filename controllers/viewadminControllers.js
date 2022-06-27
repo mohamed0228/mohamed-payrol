@@ -15,7 +15,7 @@ module.exports.view = function(req,res){
     let id = req.query.id;
     console.log(id);
     go.eid = id;
-//return res.send('<h1>Deepak</h1>'); 
+
     return res.redirect('home');  
 }
 
@@ -60,7 +60,7 @@ module.exports.salary = function(req,res){
             list.view = 1;
             return res.render('salary',{title:"Salary",salary:sal,deduct:de,list:list});
             });    
-        //return res.render('salary',{title:"Salary",user:user,salary:sal,deduct:d});
+        
         });
         
 
@@ -88,7 +88,7 @@ module.exports.payment = function(req,res){
         return res.render('payment',{title:"Payment",emp:emp,list:list});    
         
         ;})
-    //return res.render('payment',{title:"Pay History",user:user});
+   
 
 }
 
@@ -114,7 +114,7 @@ module.exports.attendence = function(req,res){
         return res.render('attendence',{title:"Attendence",emp:emp,list:list});    
         
         ;})
-    //return res.render('attendence',{title:"Attendence",user:user});
+    
 
 }
 
