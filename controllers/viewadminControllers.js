@@ -15,7 +15,6 @@ module.exports.view = function(req,res){
     let id = req.query.id;
     console.log(id);
     go.eid = id;
-
     return res.redirect('home');  
 }
 

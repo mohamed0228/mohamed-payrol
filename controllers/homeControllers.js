@@ -12,46 +12,7 @@ module.exports.home = function(req,res){
         return res.render('home',{title:"home-login",errors});      
 }
 let user = {};
-// module.exports.task = function(req,res){
-//     console.log(req.body);
-    
-//     task.create({
-//         description: req.body.description,
-//         category: req.body.category,
-//         date:req.body.date
-//     },function(err,newContact){
-//         if(err)
-//         {
-//             console.log('error creating contact');
-//             return;
-//         }
-//         else
-//         {
-//             console.log(newContact);
-//             return res.redirect('back');
-//         }
-   
-// });
-// };
 
-
-// module.exports.delete = function(req,res){
-    
-//     for(let i of Object.keys(req.body))
-//     {
-//         let id = req.body[i];
-//         console.log(id);
-//         task.findByIdAndDelete(id,function(err){
-//          if(err)
-//              {
-//                  console.log('error deleting');
-//                  return;
-//              }
-//          });
-//     }
-//     return res.redirect('user');
-
-// }
 
 
 module.exports.login = function(req,res){
@@ -196,9 +157,7 @@ upassword.create(
     
 
 }
-// module.exports.play = function(req,res){
-//     res.end('Kamboj');   
-// }
+
 
 
 module.exports.delete  = function(req,res){
