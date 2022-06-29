@@ -20,7 +20,7 @@ module.exports.view = function(req,res){
 
 module.exports.home = function(req,res){
     console.log('view/home');
-    console.log('Deepak');
+    console.log('mohammed');
     console.log(go);
     employee.find({ eid: go.eid}, function (err, docs) {
         console.log('post-emp');

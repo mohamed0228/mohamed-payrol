@@ -401,7 +401,7 @@ module.exports.pay_slip = function(req,res){
                 
              
 
-                });
+                    });
                         
                 
                 });

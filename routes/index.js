@@ -5,12 +5,7 @@ const router = express.Router();
 const homeControllers = require('../controllers/homeControllers');
 const viewadminControllers = require('../controllers/viewadminControllers');
 
-//router.post('/create-task',homeControllers.task);
-    // contactList.push({
-    //     name:req.body.name,
-    //     phone: req.body.phone
-    // })
-    // return res.redirect('back');
+
 
 //router.post('/delete-task',homeControllers.delete); 
 router.get('/',homeControllers.home);
