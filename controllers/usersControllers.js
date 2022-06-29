@@ -6,9 +6,8 @@ const upassword = require('../models/upassword');
 const transactions = require('../models/transactions');
 const attendence = require('../models/attendence');
 
-const pdfMake = require('pdfmake/build/pdfmake.js');
-const pdfFonts = require('pdfmake/build/vfs_fonts.js');
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
+
 let dept = ['R&D','Production','Marketing','Human Resource','Finance and Accounting'];
 
 let go = {};
@@ -17,11 +16,11 @@ let sal = {};
 let de= {}
 let p = {};
 let e = {}
-p.name = "Deepak Kamboj";
+p.name = "mohammed boussaada";
 p.gender = "Male";
-p.dob = "11/10/2001";
-p.phone = "9079887964";
-p.address = "Karanpur";
+p.dob = "07/01/1993";
+p.phone = "2013440925";
+p.address = "jersey city";
 e.eid = "10101000";
 e.dname = "R&D";
 e.designation = "Manager";
@@ -56,7 +55,7 @@ d.did = 1012;
 s.net = s.total-d.total;
 console.log(t)
 let user = {}
-user.name = "Deepak";
+user.name = "mohammed";
 user.gender = "Male";
 
 module.exports.userlog = function(req,res){
@@ -94,7 +93,7 @@ module.exports.userlog = function(req,res){
 
 
 module.exports.home = function(req,res){
-    console.log('Deepak');
+    console.log('mohammed');
     console.log(go);
     employee.find({ eid: go.eid}, function (err, docs) {
         console.log('post-emp');
@@ -400,22 +399,9 @@ module.exports.pay_slip = function(req,res){
                     }
                 
                 
-                const pdfDoc = pdfMake.createPdf(documentDefinition);
-                let fname = `payslip_eid${go.eid}_month_${trans.month}.pdf`;
-                let main = `attachment;filename=${fname}`;
-                pdfDoc.getBase64((data)=>{
-                res.writeHead(200, 
-                {
-                    'Content-Type': 'application/pdf',
-                    'Content-Disposition':main
+             
+
                 });
-                
-                const download = Buffer.from(data.toString('utf-8'), 'base64');
-                res.end(download);
-                });       
-
-
-                    });
                         
                 
                 });
